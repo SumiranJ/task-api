@@ -22,6 +22,6 @@ export const validateTask = [
 export const validateGetTasks = [
   query('completed')
     .optional()
-    .isIn(["true", "false"])
-    .withMessage('completed query parameter must be either "true" or "false".')
+    .isBoolean()
+    .withMessage('completed query parameter must be true or false.')
 ];
