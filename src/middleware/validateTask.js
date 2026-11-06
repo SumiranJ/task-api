@@ -18,3 +18,10 @@ export const validateTask = [
 
   checkValidationResults,
 ];
+
+export const validateGetTasks = [
+  query('completed')
+    .optional()
+    .isIn(["true", "false"])
+    .withMessage('completed query parameter must be either "true" or "false".')
+];
